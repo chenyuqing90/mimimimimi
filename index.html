@@ -1,4 +1,4 @@
-<?php
+/*<?php
 session_start();
 include_once "connDB.php";
 if(isset($_SESSION['account'])){
@@ -13,7 +13,7 @@ if(isset($_SESSION['account'])){
     $case = 0;
 }
 ?>
-
+*/
 <!doctype>
 <html>
 <head>
@@ -61,29 +61,7 @@ if(isset($_SESSION['account'])){
       </li>
     </ul>
     
-      <?php
-      if($case==0){
-          //Button trigger modal
-          echo '
-          <a href="" class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="modal" data-target="#staticBackdrop">sign in</a>
-          ';
-      }else{
-          echo '
-          
-          <div class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false" style="color:white">
-          '.$row['name'].' 會員已登入
-        </a>
-        <div class="dropdown-menu">
-          <a class="dropdown-item" href="pspace.php">個人空間頁面</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="logout.php">logout登出</a>
-        </div>
-      </div>
-          
-          ';
-      }
-      ?>
+
 
 
     
