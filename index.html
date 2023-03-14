@@ -1,7 +1,135 @@
-<!docype>
+<?php
+session_start();
+include_once "connDB.php";
+if(isset($_SESSION['account'])){
+    //echo $_SESSION['account'];
+    $case = 1;
+    $p_account = $_SESSION['account'];
+    $sql = "select * from new where account = '$p_account' ";
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+    
+}else{
+    $case = 0;
+}
+?>
+
+<!doctype>
 <html>
-  <head>
-   <body>
-     <h5>1223</h5>
-    </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- 引入 Bootstrap -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ 
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    
+<title>new</title>
+</head>
+<body style="background-color:#ADADAD">
+    <!---navbar--->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled">Disabled</a>
+      </li>
+    </ul>
+    
+      <?php
+      if($case==0){
+          //Button trigger modal
+          echo '
+          <a href="" class="btn btn-outline-success my-2 my-sm-0" type="button" data-toggle="modal" data-target="#staticBackdrop">sign in</a>
+          ';
+      }else{
+          echo '
+          
+          <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false" style="color:white">
+          '.$row['name'].' 會員已登入
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="pspace.php">個人空間頁面</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="logout.php">logout登出</a>
+        </div>
+      </div>
+          
+          ';
+      }
+      ?>
+
+
+    
+  </div>
+        </div>
+</nav>
+    
+    
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">登入</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <!---form--->
+<form class="form-login" action="loginchk.php" method="post">
+  <div class="form-group">
+    <label for="Acc">Email address</label>
+    <input type="text" class="form-control" id="Acc" name="Acc" aria-describedby="email">
+  </div>
+    
+  <div class="form-group">
+    <label for="Pass">Password</label>
+    <input type="password" class="form-control" name="Pass" id="Pass">
+  </div>
+    
+  
+  <button type="submit" class="btn btn-primary">Login</button>
+  
+</form> 
+          
+          <hr>
+          <h5 class="text-center">還沒有帳戶？</h5>
+          <div class="row justify-content-center">
+              <a href="createAcc.php" class="btn btn-success btn-lg" type="button">Create</a>
+          </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+</body>
 </html>
