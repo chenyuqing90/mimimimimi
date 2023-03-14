@@ -1,0 +1,119 @@
+<!doctype>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!---bootstrap--->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!---ajax--->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!---css&script--->
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+
+<title>靜態網頁練習</title>
+</head>
+<body style="background-color: #FFEEDD">
+    
+<!---navbar--->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+          <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled">Disabled</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-info my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+    
+<div class="container">
+    <div class="col"><h6><br><br><br></h6></div>
+    <div class="row" id="home">
+        <div class="col-12 col-md-6 ">
+            <div class="card mb-2 shadow">
+                <div class="card-title pt-2">
+                    <h5 class="text-center"><b>Azure VM</b></h5>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted"><small>2023/3/14</small></p>
+                    <p>以下是在 Azure 上建立 Windows 虚拟机 (VM) 并将其用作服务器的一些步骤：<br></p>
+                    <ol>
+                        <li>登录到 Azure 门户
+                            <a href="https://portal.azure.com/">（https://portal.azure.com/）</a>。</li>
+                        <li>选择“创建资源”，然后选择“计算机”，接着选择“虚拟机”。</li>
+                        <li>在“虚拟机”页上，选择 Windows 操作系统。</li>
+                        <li>根据需要选择 VM 的大小、存储选项等。</li>
+                        <li>配置网络设置，包括虚拟网络、子网、公共 IP 等。</li>
+                        <li>配置安全设置，如 NSG 规则和防火墙设置。</li>
+                        <li>配置管理选项，如管理员用户名和密码。</li>
+                        <li>完成配置后，选择“创建”。</li>
+                        <li>Azure 将开始创建 VM。在创建过程中，你可以监视进度并查看 VM 的状态。</li>
+                        <li>创建完成后，你可以通过远程桌面连接到 VM，并将其用作服务器。</li>
+                    </ol>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="card mb-2 shadow">
+                <div class="card-title pt-2">
+                    <h5 class="text-center"><b>Azure VM</b></h5>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted"><small>2023/3/14</small></p>
+                    <p>以下是在 Azure 上建立 Windows 虚拟机 (VM) 并将其用作服务器的一些步骤：<br></p>
+                    <ul>
+                        <li>登录到 Azure 门户
+                            <a href="https://portal.azure.com/">（https://portal.azure.com/）</a>。</li>
+                        <li>选择“创建资源”，然后选择“计算机”，接着选择“虚拟机”。</li>
+                        <li>在“虚拟机”页上，选择 Windows 操作系统。</li>
+                        <li>根据需要选择 VM 的大小、存储选项等。</li>
+                        <li>配置网络设置，包括虚拟网络、子网、公共 IP 等。</li>
+                        <li>配置安全设置，如 NSG 规则和防火墙设置。</li>
+                        <li>配置管理选项，如管理员用户名和密码。</li>
+                        <li>完成配置后，选择“创建”。</li>
+                        
+                    </ul>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+</html>

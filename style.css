@@ -1,0 +1,15 @@
+body{
+    scroll-behavior: smooth;
+}
+a{
+}
+.navbar{
+    background-color: #FFA042;
+    color: black;
+}
+.navbar a{
+    color: black;
+}
+.navbar a:hover{
+    color: #D0D0D0;
+}
